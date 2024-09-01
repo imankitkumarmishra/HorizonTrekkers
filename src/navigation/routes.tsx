@@ -1,11 +1,12 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
+import AppNavigator from './appNavigator'
+import AuthNavigator from './authNavigator'
 
 const Routes = () => {
+  const [user, setUser] = useState(false)
   return (
-    <View>
-      <Text>Routes</Text>
-    </View>
+    user?<AppNavigator />:<AuthNavigator />
   )
 }
 
